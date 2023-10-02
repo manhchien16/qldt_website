@@ -17,7 +17,7 @@
 ?>
 
     
-// <?php
+<?php
 //           $conn=mysqli_connect("localhost","root","") or die ("Không connect đc với máy chủ");
 //           //chon CSDL de lam viec
 //            mysqli_select_db($conn,"utt") or die ("Không tìm thấy CSDL");
