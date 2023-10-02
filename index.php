@@ -10,13 +10,13 @@
 
 
 <?php
-          $conn=mysqli_connect("localhost","root","") or die ("Không connect đc với máy chủ");
-          //chon CSDL de lam viec
-          mysqli_select_db($conn,"utt") or die ("Không tìm thấy CSDL");
+          // $conn=mysqli_connect("localhost","root","") or die ("Không connect đc với máy chủ");
+          // //chon CSDL de lam viec
+          // mysqli_select_db($conn,"utt") or die ("Không tìm thấy CSDL");
 
-          $query = "Select * From student";
-          $result = mysqli_query($conn, $query);
-          $row = mysqli_fetch_assoc($result); //hien thi len form
+          // $query = "Select * From student";
+          // $result = mysqli_query($conn, $query);
+          // $row = mysqli_fetch_assoc($result); //hien thi len form
         ?>
 <body>
     <div class="wraper">
