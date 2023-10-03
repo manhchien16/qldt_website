@@ -4,7 +4,6 @@
     header("Location: login.html");
   }
 ?>
-
 <!DOCTYPE html>
 <html lang="en">
 
