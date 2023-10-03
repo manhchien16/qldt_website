@@ -4,7 +4,7 @@
     $Password = $_POST["Password"];
 
     //tao ket noi
-    $conn = mysqli_connect("localhost","root","") or die;
+    $conn = mysqli_connect("localhost","root","") or die ("Không connect đc với máy chủ");
     //tim csdl de lam viec
     mysqli_select_db($conn,"utt") or die;
     // cau lenh query
