@@ -1,4 +1,4 @@
-<?php
+ <?php
 $host = "yepps.mysql.database.azure.com";
 $username = "baoanhhihi";
 $password = "Vuchien@123";
@@ -28,9 +28,6 @@ if ($conn->connect_error) {
 
     // tắt hiển thị lỗi
     // ini_set('display_errors', '0');
-
-    $count = mysqli_num_rows($result);
-    $row = mysqli_fetch_assoc($result); //hien thi len form
 
     if($count == 1){
         session_start();
