@@ -56,5 +56,5 @@ jobs:
         with:
           app-name: 'cutgf'
           slot-name: 'Production'
-          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_E92695315DFD4ACFA6DE6E3EEC413F28 }}
+          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_17FDA02A48624431BE5468ADB733396C }}
           package: .
