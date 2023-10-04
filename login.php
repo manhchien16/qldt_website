@@ -3,12 +3,21 @@
     $User = $_POST["User"];
     $Password = $_POST["Password"];
 
+$host = "yepps.mysql.database.azure.com";
+$username = "baoanhhihi";
+$password = "Vuchien@123";
+$database = "utt";
 
 
     //tao ket noi
-    $conn = mysqli_connect("localhost", "root", "") or die ("Không connect đc với máy chủ");
-    //tim csdl de lam viec
-    mysqli_select_db($conn,"utt") or die;
+    $conn = new mysqli($host, $username, $password, $database);
+
+// Check the connection
+if ($conn->connect_error) {
+    die("Connection failed: " . $conn->connect_error);
+} else {
+    echo "Connected successfully";
+}
     // cau lenh query
     $sql_insert_account ="SELECT * FROM `account` WHERE User = '$User' and Password = '$Password'";
 
