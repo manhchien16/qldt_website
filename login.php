@@ -31,7 +31,7 @@
     if($count == 1){
         session_start();
         $_SESSION['User_name'] = $User;
-        header('Location: index.php');
+        header('Location: index.php?id=1');
     } else{
         header('Location: login.html');
     }
