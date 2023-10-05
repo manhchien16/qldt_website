@@ -5,6 +5,7 @@
     $Password = $_POST["Password"];
 
     //tao ket noi
+    $host = "yepps.mysql.database.azure.com";
     $username = "baoanhhihi";
     $password = "Vuchien@123";
     $database = "utt";
