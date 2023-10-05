@@ -19,7 +19,7 @@
     if($count == 1){
        session_start();
         $_SESSION['User_name'] = $User;
-        header('Location: index.html');
+        header('Location: index.php');
     } else{
         header('Location: login.html');
     }
