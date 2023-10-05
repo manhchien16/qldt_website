@@ -15,13 +15,6 @@
 </head>
 
 
-<?php 
-  session_start();
-  if(!isset($_SESSION['User_name'])) {
-    header("Location: login.html");
-  }
-?>
-
     
 <?php
 $host = "yepps.mysql.database.azure.com";
