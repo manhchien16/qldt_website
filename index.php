@@ -1,8 +1,8 @@
 <?php 
-  session_start();
-  if(!isset($_SESSION['User_name'])) {
-    header("Location: login.html");
-  }
+  // session_start();
+  // if(!isset($_SESSION['User_name'])) {
+  //   header("Location: login.html");
+  // }
 ?>
 <!DOCTYPE html>
 <html lang="en">
