@@ -5,9 +5,13 @@
     $Password = $_POST["Password"];
 
     //tao ket noi
-    $conn = mysqli_connect("yepps.mysql.database.azure.com","baoanhhihi","Vuchien@123") or die;
-    //tim csdl de lam viec
-    mysqli_select_db($conn,"utt") or die;
+    $username = "baoanhhihi";
+    $password = "Vuchien@123";
+    $database = "utt";
+
+
+    //tao ket noi
+    $conn = new mysqli($host, $username, $password, $database);
     // cau lenh query
     $sql_insert_account = "SELECT * FROM account WHERE User = '$User' and Password = '$Password'";
 
