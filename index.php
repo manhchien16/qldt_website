@@ -17,16 +17,16 @@
 
     
 <?php
-$host = "yepps.mysql.database.azure.com";
+    $host = "yepps.mysql.database.azure.com";
     $username = "baoanhhihi";
     $password = "Vuchien@123";
     $database = "utt";
 
-
+    $id = $_GET['id'];
     //tao ket noi
     $conn = new mysqli($host, $username, $password, $database);
 
-          $query = "Select * From student";
+          $query = "Select * From student where id = '$id'";
            $result = mysqli_query($conn, $query);
            $row = mysqli_fetch_assoc($result); //hien thi len form
         ?>
@@ -201,7 +201,7 @@ $host = "yepps.mysql.database.azure.com";
                   <br>
 
                   <?php
-                      $sql_select_hangsx="SELECT * FROM `2022-2023_2`";
+                      $sql_select_hangsx="SELECT * FROM `2022-2023_2` where id = '$id'";
                       $result_se_hang=mysqli_query($conn,$sql_select_hangsx);
                       $tong_bg=mysqli_num_rows($result_se_hang);// dem so ban ghi
                       //echo $tong_bg; die;
