@@ -201,9 +201,6 @@ $host = "yepps.mysql.database.azure.com";
                   <br>
 
                   <?php
-                      $conn=mysqli_connect("localhost","root","") or die ("Không connect đc với máy chủ");
-                      //chon CSDL de lam viec
-                      mysqli_select_db($conn,"utt") or die ("Không tìm thấy CSDL");
                       $sql_select_hangsx="SELECT * FROM `2022-2023_2`";
                       $result_se_hang=mysqli_query($conn,$sql_select_hangsx);
                       $tong_bg=mysqli_num_rows($result_se_hang);// dem so ban ghi
