@@ -1,32 +1,42 @@
-  
-    <?php
-    // lay dulieu tu form dangnhap
+<?php
+    // Get data from form
     $User = $_POST["User"];
     $Password = $_POST["Password"];
 
-    //tao ket noi
+    // Database connection details
     $host = "yepps.mysql.database.azure.com";
     $username = "baoanhhihi";
     $password = "Vuchien@123";
     $database = "utt";
 
-
-    //tao ket noi
+    // Create connection
     $conn = new mysqli($host, $username, $password, $database);
-    // cau lenh query
-    $sql_insert_account = "SELECT * FROM account WHERE User = '$User' and Password = '$Password'";
 
+    // Check connection
+    if ($conn->connect_error) {
+        die("Connection failed: " . $conn->connect_error);
+    }
 
-    //thuc hien truy van
-    $result = mysqli_query($conn, $sql_insert_account);
-    $count = mysqli_num_rows($result);
+    // Prepare and bind
+    $stmt = $conn->prepare("SELECT * FROM account WHERE User = ? and Password = ?");
+    $stmt->bind_param("ss", $User, $Password);
+
+    // Execute the statement
+    $stmt->execute();
+
+    // Get the result
+    $result = $stmt->get_result();
+    $count = $result->num_rows;
 
     if($count == 1){
-       session_start();
+        session_start();
         $_SESSION['User_name'] = $User;
         header('Location: index.php');
     } else{
         header('Location: login.html');
     }
-?>
 
+    // Close the statement and connection
+    $stmt->close();
+    $conn->close();
+?>
