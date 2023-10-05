@@ -18,8 +18,8 @@
     }
 
     // Prepare and bind
-    $stmt = $conn->prepare("SELECT * FROM account WHERE User = ? and Password = ?");
-    $stmt->bind_param("ss", $User, $Password);
+    $stmt = $conn->prepare("SELECT * FROM account WHERE User = '$User' and Password = '$Password'");
+    // $stmt->bind_param("ss", $User, $Password);
 
     // Execute the statement
     $stmt->execute();
